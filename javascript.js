@@ -22,11 +22,14 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
+    const playerChoice = humanChoice.toUpperCase()
     //win conditions for player
-    if (humanChoice.toUpperCase() == "ROCK" && computerChoice == "Scissors" ||
-    humanChoice.toUpperCase() == "SCISSORS" && computerChoice == "Paper" ||
-    humanChoice.toUpperCase() == "PAPER" && computerChoice == "Rock") {
+    if (playerChoice == "ROCK" && computerChoice == "Scissors" ||
+    playerChoice == "SCISSORS" && computerChoice == "Paper" ||
+    playerChoice == "PAPER" && computerChoice == "Rock") {
         console.log(`You won! ${humanChoice} beats ${computerChoice}!`);
+
+        //else if ()
     }
     //switch
     //case player = paper
