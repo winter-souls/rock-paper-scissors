@@ -22,6 +22,9 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
+    if (humanChoice.toUpperCase() == "ROCK" && computerChoice == "Scissors") {
+        console.log("You won! Rock beats Scissors!");
+    }
     //switch
     //case player = paper
     //if PC chose paper = tie, else if PC chose scissor = lose, else if PC chose rock = win
