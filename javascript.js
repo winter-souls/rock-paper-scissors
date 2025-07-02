@@ -42,17 +42,6 @@ function playRound(humanChoice, computerChoice) {
             console.log(`You lose! ${humanChoice} succumbs to ${computerChoice}.`)
 
     }
-    //switch
-    //case player = paper
-    //if PC chose paper = tie, else if PC chose scissor = lose, else if PC chose rock = win
-
-    //case player = scissor
-    //same shit (increment score variables accordingly)
-
-    //case player = rock
-    //same shit
-    console.log(humanChoice);
-    console.log(computerChoice);
 }
 
 //playRound(getHumanChoice(), getComputerChoice());
