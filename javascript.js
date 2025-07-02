@@ -17,7 +17,6 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let humanChoice = window.prompt("Choose: rock, paper, or scissors?");
-    //console.log(humanChoice);
     return humanChoice;
 }
 
@@ -35,12 +34,13 @@ function playRound(humanChoice, computerChoice) {
         playerChoice == "PAPER" && computerChoice == "Paper"
         ) {
             console.log(`You tied! ${humanChoice} and ${computerChoice} are equal!`);
+
+        //lose conditions
         } else if (playerChoice == "ROCK" && computerChoice == "Paper" ||
             playerChoice == "SCISSORS" && computerChoice == "Rock" ||
             playerChoice == "PAPER" && computerChoice == "Scissors"
         ){
             console.log(`You lose! ${humanChoice} succumbs to ${computerChoice}.`)
-
     }
 }
 
