@@ -29,7 +29,18 @@ function playRound(humanChoice, computerChoice) {
     playerChoice == "PAPER" && computerChoice == "Rock") {
         console.log(`You won! ${humanChoice} beats ${computerChoice}!`);
 
-        //else if ()
+        //tie conditions
+     } else if (playerChoice == "ROCK" && computerChoice == "Rock" ||
+        playerChoice == "SCISSORS" && computerChoice == "Scissors" ||
+        playerChoice == "PAPER" && computerChoice == "Paper"
+        ) {
+            console.log(`You tied! ${humanChoice} and ${computerChoice} are equal!`);
+        } else if (playerChoice == "ROCK" && computerChoice == "Paper" ||
+            playerChoice == "SCISSORS" && computerChoice == "Rock" ||
+            playerChoice == "PAPER" && computerChoice == "Scissors"
+        ){
+            console.log(`You lose! ${humanChoice} succumbs to ${computerChoice}.`)
+
     }
     //switch
     //case player = paper
