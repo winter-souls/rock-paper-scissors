@@ -51,10 +51,12 @@ function playGame() {
                 console.log(`You lose! ${humanChoice} succumbs to ${computerChoice}.`);
                 computerScore++
         }
+        //logs both sets of scores each round
         console.log(`Player Score: ${humanScore}`);
         console.log(`Computer Score: ${computerScore}`);
     }
 
+    //plays five rounds
     playRound(getHumanChoice(), getComputerChoice());
     playRound(getHumanChoice(), getComputerChoice());
     playRound(getHumanChoice(), getComputerChoice());
