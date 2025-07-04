@@ -52,5 +52,3 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-//playRound(getHumanChoice(), getComputerChoice());
-
