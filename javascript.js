@@ -51,7 +51,10 @@ function playGame() {
                 console.log(`You lose! ${humanChoice} succumbs to ${computerChoice}.`);
                 computerScore++
         }
+        console.log(`Player Score: ${humanScore}`);
+        console.log(`Computer Score: ${computerScore}`);
     }
 
+    playRound(getHumanChoice(), getComputerChoice());
 }
 
