@@ -2,9 +2,9 @@
 function getComputerChoice() {
     let randomNumber = Math.random();
 
-    if (randomNumber <= 0.3) {
+    if (randomNumber <= 0.33) {
         computerChoice = "Rock";
-    } else if (randomNumber <= 0.6) {
+    } else if (randomNumber <= 0.66) {
         computerChoice = "Paper";
     } else {
         computerChoice = "Scissors";
