@@ -1,7 +1,3 @@
-//score variables
-let humanScore = 0;
-let computerScore = 0;
-
 //computer chooses rock/paper/scissors based on a random decimal point value
 function getComputerChoice() {
     let randomNumber = Math.random();
@@ -23,32 +19,39 @@ function getHumanChoice() {
     return humanChoice;
 }
 
-//plays one round of R/P/S
-function playRound(humanChoice, computerChoice) {
-    //switch all human inputs to upper case for easy comparison
-    const playerChoice = humanChoice.toUpperCase()
+function playGame() {
+    //score variables
+    let humanScore = 0;
+    let computerScore = 0;
 
-    //win conditions for player
-    if (playerChoice == "ROCK" && computerChoice == "Scissors" ||
-    playerChoice == "SCISSORS" && computerChoice == "Paper" ||
-    playerChoice == "PAPER" && computerChoice == "Rock") {
-        console.log(`You won! ${humanChoice} beats ${computerChoice}!`);
-        humanScore++
+    //plays one round of R/P/S
+    function playRound(humanChoice, computerChoice) {
+        //switch all human inputs to upper case for easy comparison
+        const playerChoice = humanChoice.toUpperCase()
 
-        //tie conditions
-     } else if (playerChoice == "ROCK" && computerChoice == "Rock" ||
-        playerChoice == "SCISSORS" && computerChoice == "Scissors" ||
-        playerChoice == "PAPER" && computerChoice == "Paper"
-        ) {
-            console.log(`You tied! ${humanChoice} and ${computerChoice} are equal!`);
+        //win conditions for player
+        if (playerChoice == "ROCK" && computerChoice == "Scissors" ||
+        playerChoice == "SCISSORS" && computerChoice == "Paper" ||
+        playerChoice == "PAPER" && computerChoice == "Rock") {
+            console.log(`You won! ${humanChoice} beats ${computerChoice}!`);
+            humanScore++
 
-        //lose conditions
-        } else if (playerChoice == "ROCK" && computerChoice == "Paper" ||
-            playerChoice == "SCISSORS" && computerChoice == "Rock" ||
-            playerChoice == "PAPER" && computerChoice == "Scissors"
-        ){
-            console.log(`You lose! ${humanChoice} succumbs to ${computerChoice}.`);
-            computerScore++
+            //tie conditions
+        } else if (playerChoice == "ROCK" && computerChoice == "Rock" ||
+            playerChoice == "SCISSORS" && computerChoice == "Scissors" ||
+            playerChoice == "PAPER" && computerChoice == "Paper"
+            ) {
+                console.log(`You tied! ${humanChoice} and ${computerChoice} are equal!`);
+
+            //lose conditions
+            } else if (playerChoice == "ROCK" && computerChoice == "Paper" ||
+                playerChoice == "SCISSORS" && computerChoice == "Rock" ||
+                playerChoice == "PAPER" && computerChoice == "Scissors"
+            ){
+                console.log(`You lose! ${humanChoice} succumbs to ${computerChoice}.`);
+                computerScore++
+        }
     }
+
 }
 
