@@ -28,9 +28,8 @@ for (button of gameButtons) {
 
     //plays one round of R/P/S
     function playRound(humanChoice, computerChoice) {
-        //switch all human inputs to upper case for easy comparison
-        const playerChoice = humanChoice.toUpperCase()
-
+        var playerChoice = humanChoice;
+        
         //win conditions for player
         if (playerChoice == "ROCK" && computerChoice == "Scissors" ||
         playerChoice == "SCISSORS" && computerChoice == "Paper" ||
