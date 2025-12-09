@@ -15,13 +15,6 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-//human gets window prompt that asks them to choose R/P/S
-function getHumanChoice() {
-    let humanChoice = window.prompt("Choose: rock, paper, or scissors?");
-    return humanChoice;
-}
-
-function playGame() {
     //score variables
     let humanScore = 0;
     let computerScore = 0;
@@ -56,7 +49,6 @@ function playGame() {
         //logs both sets of scores each round
         console.log(`Player Score: ${humanScore}`);
         console.log(`Computer Score: ${computerScore}`);
-    } 
 
     //declare a winner
     if (humanScore > computerScore) {
