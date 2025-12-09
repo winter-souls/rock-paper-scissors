@@ -1,4 +1,9 @@
+// UI buttons for game
 var gameButtons = document.getElementsByClassName("playRound");
+
+//score variables
+let humanScore = 0;
+let computerScore = 0;
 
 //computer chooses rock/paper/scissors based on a random decimal point value
 function getComputerChoice() {
@@ -14,10 +19,6 @@ function getComputerChoice() {
 
     return computerChoice;
 }
-
-    //score variables
-    let humanScore = 0;
-    let computerScore = 0;
 
     //plays one round of R/P/S
     function playRound(humanChoice, computerChoice) {
