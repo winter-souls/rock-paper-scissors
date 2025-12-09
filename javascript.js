@@ -22,14 +22,17 @@ function getComputerChoice() {
 
 for (button of gameButtons) {
     button.onclick = (e) => {
-        playRound(e, getComputerChoice());
+        var buttonPressed = e.target.value;
+        var choiceMade = buttonPressed.toUpperCase();
+        playRound(choiceMade, getComputerChoice());
     }
 }
 
     //plays one round of R/P/S
     function playRound(humanChoice, computerChoice) {
         var playerChoice = humanChoice;
-        
+        console.log(humanChoice);
+        console.log(computerChoice);
         //win conditions for player
         if (playerChoice == "ROCK" && computerChoice == "Scissors" ||
         playerChoice == "SCISSORS" && computerChoice == "Paper" ||
