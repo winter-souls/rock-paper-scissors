@@ -1,3 +1,5 @@
+var gameButtons = document.getElementsByClassName("playRound");
+
 //computer chooses rock/paper/scissors based on a random decimal point value
 function getComputerChoice() {
     let randomNumber = Math.random();
