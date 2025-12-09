@@ -20,6 +20,12 @@ function getComputerChoice() {
     return computerChoice;
 }
 
+for (button of gameButtons) {
+    button.onclick = (e) => {
+        playRound(e, getComputerChoice());
+    }
+}
+
     //plays one round of R/P/S
     function playRound(humanChoice, computerChoice) {
         //switch all human inputs to upper case for easy comparison
