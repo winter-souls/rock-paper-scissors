@@ -8,6 +8,9 @@ let computerScore = 0;
 //Results table variable
 let resultsTable = document.getElementById("results");
 
+//Div displaying who won after 5 points earned
+let whoWon = document.getElementById("whoWon");
+
 //computer chooses rock/paper/scissors based on a random decimal point value
 function getComputerChoice() {
     let randomNumber = Math.random();
@@ -78,11 +81,14 @@ for (button of gameButtons) {
     //declare a winner
     if (humanScore >= 5 || computerScore >= 5) {
         if (humanScore > computerScore) {
-            console.log("You won the game!");
+            let message = whoWon.appendChild(document.createElement("p"));
+            message.textContent = "You won the game!";
         } else if (humanScore < computerScore) {
-            console.log("You lost the game!"); 
+            let message = whoWon.appendChild(document.createElement("p"));
+            message.textContent = "The computer won the game!";
         } else {
-            console.log("How did you get here? At least ONE of you should have won.");
+            let message = whoWon.appendChild(document.createElement("p"));
+            message.textContent = "How did you get here? ONE of you should have won";
         }
     }
     
