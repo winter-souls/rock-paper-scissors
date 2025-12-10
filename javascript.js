@@ -5,6 +5,7 @@ var gameButtons = document.getElementsByClassName("playRound");
 let humanScore = 0;
 let computerScore = 0;
 
+//Results table variable
 let resultsTable = document.getElementById("results");
 
 //computer chooses rock/paper/scissors based on a random decimal point value
@@ -59,6 +60,20 @@ for (button of gameButtons) {
         //logs both sets of scores each round
         console.log(`Player Score: ${humanScore}`);
         console.log(`Computer Score: ${computerScore}`);
+
+        // Insert new row  and data to the results table
+        let row = resultsTable.insertRow(-1);
+        let playerDecision = row.insertCell(0);
+        let computerDecision = row.insertCell(1);
+        let pScore = row.insertCell(2);
+        let cScore = row.insertCell(3);
+
+        playerDecision.innerHTML = playerChoice;
+        computerDecision.innerHTML = computerChoice;
+        pScore.innerHTML = humanScore;
+        cScore.innerHTML = computerScore;
+
+
 
     //declare a winner
     if (humanScore > computerScore) {
