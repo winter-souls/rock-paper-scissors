@@ -76,12 +76,15 @@ for (button of gameButtons) {
 
 
     //declare a winner
-    if (humanScore > computerScore) {
-        console.log("You won the game!");
-    } else if (humanScore < computerScore) {
-        console.log("You lost the game!"); 
-    } else {
-        console.log("How did you get here? At least ONE of you should have won.");
+    if (humanScore >= 5 || computerScore >= 5) {
+        if (humanScore > computerScore) {
+            console.log("You won the game!");
+        } else if (humanScore < computerScore) {
+            console.log("You lost the game!"); 
+        } else {
+            console.log("How did you get here? At least ONE of you should have won.");
+        }
     }
+    
 }
 
